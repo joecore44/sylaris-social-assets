@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+@font-face{font-family:Sora;font-weight:500;src:url(FONTS/sora-latin-500-normal.woff2)}
+@font-face{font-family:Sora;font-weight:600;src:url(FONTS/sora-latin-600-normal.woff2)}
+@font-face{font-family:Sora;font-weight:700;src:url(FONTS/sora-latin-700-normal.woff2)}
+@font-face{font-family:InterW;font-weight:400;src:url(IFONTS/inter-latin-400-normal.woff2)}
+@font-face{font-family:InterW;font-weight:500;src:url(IFONTS/inter-latin-500-normal.woff2)}
+@font-face{font-family:InterW;font-weight:600;src:url(IFONTS/inter-latin-600-normal.woff2)}
+:root{
+  --teal:#16D6C8; --blue:#4AA8FF;
+  --pad:84px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:var(--w);height:var(--h)}
+body{font-family:InterW,Inter,sans-serif;-webkit-font-smoothing:antialiased;overflow:hidden;position:relative}
+
+/* Dark theme: near-black with teal and blue glows and a faint grid */
+.dark{background:#0b0f15;color:#fff}
+.dark .glow{position:absolute;inset:0;background:
+  radial-gradient(55% 40% at 0% 0%, rgba(22,214,200,.20), transparent 70%),
+  radial-gradient(45% 35% at 100% 0%, rgba(74,168,255,.14), transparent 70%),
+  radial-gradient(60% 30% at 50% 105%, rgba(22,214,200,.16), transparent 70%)}
+.dark .grid{position:absolute;inset:0;opacity:.05;background-image:
+  linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:56px 56px}
+.dark .accent{color:var(--teal)}
+.dark .sub{color:rgba(255,255,255,.72)}
+.dark .pill{background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.12);color:#fff}
+.dark .url{color:rgba(255,255,255,.62)}
+.dark .note{color:rgba(255,255,255,.42)}
+.dark .eyebrow{color:rgba(255,255,255,.55)}
+.dark .cta{background:#fff;color:#0b0f15}
+.dark .card{background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.10)}
+
+/* Light theme: white with soft aurora glows */
+.light{background:#fbfcfd;color:#0b0f15}
+.light .glow{position:absolute;inset:0;background:
+  radial-gradient(45% 30% at 18% 0%, rgba(22,214,200,.18), transparent 70%),
+  radial-gradient(40% 30% at 85% 2%, rgba(74,168,255,.16), transparent 70%),
+  radial-gradient(55% 25% at 30% 100%, rgba(22,214,200,.12), transparent 70%)}
+.light .grid{display:none}
+.light h1{font-weight:700;letter-spacing:-.055em}
+.light .accent{color:#9aa1ab}
+.light .sub{color:#4b5563}
+.light .pill{background:#fff;border:1.5px solid rgba(11,15,21,.08);color:#0b0f15;box-shadow:0 6px 20px rgba(11,15,21,.06)}
+.light .url{color:#6b7280}
+.light .note{color:#9aa1ab}
+.light .eyebrow{color:#6b7280}
+.light .cta{background:#0b0f15;color:#fff}
+.light .card{background:#0e141c;color:#fff;border:none}
+
+.frame{position:absolute;inset:0;padding:var(--pad);display:flex;flex-direction:column}
+.pill{align-self:flex-start;display:inline-flex;align-items:center;gap:14px;height:60px;padding:0 26px;border-radius:999px;font-weight:600;font-size:25px;letter-spacing:-.01em}
+.pill::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--teal)}
+.main{flex:1;display:flex;flex-direction:column;justify-content:var(--justify,center);gap:34px;padding-top:40px}
+.eyebrow{font-weight:600;font-size:22px;letter-spacing:.14em;text-transform:uppercase}
+h1{font-family:Sora;font-weight:var(--hw,500);font-size:var(--hs,108px);line-height:1.04;letter-spacing:-.045em}
+.stat{font-family:Sora;font-weight:700;font-size:var(--ss,190px);line-height:.95;letter-spacing:-.05em}
+.sub{font-size:var(--subs,33px);line-height:1.4;max-width:900px}
+.cta{align-self:flex-start;display:inline-flex;align-items:center;height:76px;padding:0 40px;border-radius:999px;font-family:Sora;font-weight:600;font-size:28px;letter-spacing:-.02em}
+.list{display:flex;flex-direction:column;gap:18px}
+.card{border-radius:22px;padding:26px 30px}
+.card b{display:block;font-family:Sora;font-weight:600;font-size:34px;letter-spacing:-.03em;margin-bottom:6px}
+.card span{font-size:24px;opacity:.75}
+.note{font-size:19px;line-height:1.45;max-width:880px;margin-bottom:26px}
+.foot{display:flex;align-items:center;justify-content:space-between}
+.foot img{height:34px}
+.url{font-weight:600;font-size:23px}
+</style>
+</head>
+<body class="THEME" style="--w:WIDTHpx;--h:HEIGHTpx;STYLE">
+<div class="glow"></div><div class="grid"></div>
+<div class="frame">
+BODY
+</div>
+</body>
+</html>

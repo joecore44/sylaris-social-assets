@@ -1,0 +1,9 @@
+{
+  "name": "sylaris-social-template",
+  "private": true,
+  "description": "Fonts for the Sylaris social image renderer",
+  "dependencies": {
+    "@fontsource/inter": "^5.0.0",
+    "@fontsource/sora": "^5.0.0"
+  }
+}
